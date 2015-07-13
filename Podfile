@@ -1,15 +1,16 @@
-platform :ios, '7.0'
 source 'https://github.com/CocoaPods/Specs.git'
 
-# Add Application pods here
-pod 'AFNetworking'
+# Uncomment this line to define a global platform for your project
+# platform :ios, "6.0"
 
-target :unit_tests, :exclusive => true do
-  link_with 'UnitTests'
-  pod 'Specta',     :git=>'git@github.com:specta/specta.git'
-  pod 'Expecta'
-  pod 'OCMockito'
-  pod 'Swizzlean'
+target "github-repo-list" do
+  pod "AFNetworking", "~> 2.0"
+end
+
+target "github-repo-listTests" do
+  pod 'Specta'
   pod 'OHHTTPStubs'
+  pod 'Expecta'
   pod 'KIF'
 end
+
